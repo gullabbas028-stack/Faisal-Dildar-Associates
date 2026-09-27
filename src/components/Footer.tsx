@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import {
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
@@ -7,14 +7,13 @@ import {
   mailLink,
   openWhatsApp,
   telLink,
-  waLink,
 } from "../lib/site";
 import {
   InstagramIcon,
   FacebookIcon,
   LinkedinIcon,
-  XIcon,
-  WhatsAppIcon,
+  TikTokIcon,
+  YouTubeIcon,
 } from "./SocialIcons";
 
 const quickLinks = [
@@ -34,51 +33,63 @@ const serviceLinks = [
   "Investment Consulting",
 ];
 
+const logos = [
+  { src: "/images/logo1.png", alt: "Partner logo 1" },
+  { src: "/images/logo2.png", alt: "Partner logo 2" },
+  { src: "/images/logo3.png", alt: "Partner logo 3" },
+  { src: "/images/logo4.png", alt: "Partner logo 4" },
+  { src: "/images/logo5.png", alt: "Partner logo 5" },
+];
+
 export default function Footer() {
   const socials = [
-    { Icon: InstagramIcon, label: "Instagram" },
-    { Icon: FacebookIcon, label: "Facebook" },
-    { Icon: LinkedinIcon, label: "LinkedIn" },
-    { Icon: XIcon, label: "X" },
-    { Icon: WhatsAppIcon, label: "WhatsApp" },
+    {
+      Icon: InstagramIcon,
+      label: "Instagram",
+      href: "https://www.instagram.com/faisaldildarassociates?stkn=bHdid3locTB6OXps",
+    },
+    {
+      Icon: FacebookIcon,
+      label: "Facebook",
+      href: "https://www.facebook.com/share/18NLAnyGUf/",
+    },
+    {
+      Icon: LinkedinIcon,
+      label: "LinkedIn",
+      href: "http://www.linkedin.com/in/gull-abbas-122255381",
+    },
+    {
+      Icon: TikTokIcon,
+      label: "TikTok",
+      href: "https://www.tiktok.com/@faisaldildarassociates?_r=1&_t=ZS-9A5iDyapWk8",
+    },
+    {
+      Icon: YouTubeIcon,
+      label: "YouTube",
+      href: "https://www.facebook.com/share/18NLAnyGUf/",
+    },
   ];
 
   return (
     <>
-      {/* CTA band */}
-      <section className="relative overflow-hidden bg-[#2596be]">
-        <div className="absolute inset-0 opacity-15 [background-image:radial-gradient(circle_at_20%_20%,white_1px,transparent_1px)] [background-size:22px_22px]" />
-        <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-4 py-12 sm:px-6 lg:px-8">
-          <div>
-            <h3 className="text-2xl leading-tight font-extrabold text-white sm:text-3xl">
-              Your Dream Property Is Closer
-              <br />
-              Than You Think.
-            </h3>
-            <p className="mt-2 text-sm text-[#eaf7fb]">
-              Let CityScape help you find a property that matches your vision.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="#properties"
-              className="group flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-[#1f7fa7] transition hover:bg-[#edf8fc]"
+      <section className="overflow-hidden bg-[#2596be] py-8 sm:py-10">
+        <div className="logo-marquee__track flex w-max hover:[animation-play-state:paused]">
+          {[0, 1, 2, 3].map((copyIndex) => (
+            <div
+              key={copyIndex}
+              aria-hidden={copyIndex > 0}
+              className="flex shrink-0 items-center gap-6 pr-6 sm:gap-8 sm:pr-8"
             >
-              Explore Properties
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </a>
-            <button
-              onClick={() =>
-                openWhatsApp(
-                  "Hello CityScape! I'd like to contact you about a property.",
-                )
-              }
-              className="flex items-center gap-2 rounded-full border border-white/70 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white/10"
-            >
-              <WhatsAppIcon className="h-4 w-4" />
-              Contact Us
-            </button>
-          </div>
+              {logos.map(({ src, alt }) => (
+                <div
+                  key={`${copyIndex}-${src}`}
+                  className="flex h-16 w-36 items-center justify-center rounded-xl border border-white/30 bg-white/95 p-3 shadow-sm transition duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 sm:h-20 sm:w-44 sm:p-4"
+                >
+                  <img src={src} alt={alt} className="h-full w-full object-contain" />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -87,24 +98,20 @@ export default function Footer() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <a href="#home" className="flex items-center gap-2.5">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#2596be] text-white">
-                  <Building2 className="h-5 w-5" />
-                </span>
-                <span className="text-xl font-extrabold tracking-tight text-white">
-                  City<span className="text-[#2596be]">Scape</span>
-                </span>
+                <img
+                  src="/images/faisal_dildar_associates_logo.svg"
+                  alt="Faisal Dildar Associates"
+                  className="h-20 w-20 object-contain"
+                />
               </a>
               <p className="mt-4 max-w-xs text-[13px] leading-relaxed">
-                Premium real estate solutions for modern living and smart
-                investments. Trusted by over 4,000 clients worldwide.
+               Explore exceptional properties, trusted opportunities, and expert real estate guidance with Faisal Dildar Associates. Your next property journey starts here.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
-                {socials.map(({ Icon, label }) => (
+                {socials.map(({ Icon, label, href }) => (
                   <a
                     key={label}
-                    href={waLink(
-                      `Hi CityScape, I'd like to connect (via ${label}).`,
-                    )}
+                    href={href}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
@@ -180,22 +187,20 @@ export default function Footer() {
                   </span>
                 </li>
               </ul>
-              <button
-                onClick={() =>
-                  openWhatsApp(
-                    "Hello CityScape! I'd like to BOOK an appointment with the owner.",
-                  )
-                }
+              <a
+                href="https://maps.app.goo.gl/yef8rgMyAPq875fs8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-5 flex items-center gap-2 rounded-lg bg-[#ce1a1a] px-4 py-2.5 text-[11px] font-bold text-white transition hover:brightness-95"
               >
-                <WhatsAppIcon className="h-3.5 w-3.5" />
+                <MapPin className="h-3.5 w-3.5" />
                 LOCATION
-              </button>
+              </a>
             </div>
           </div>
 
           <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-[12px]">
-            <p>© {new Date().getFullYear()} CityScape. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} faisaldildar. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#home" className="hover:text-[#2596be]">
                 Privacy Policy

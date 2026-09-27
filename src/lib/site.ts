@@ -1,9 +1,9 @@
 export const PHONE_DISPLAY = "+92 281449404";
 export const PHONE_RAW = "+92281449404";
 export const WHATSAPP_NUMBER = "+92281449404";
-export const EMAIL = "jamfaisal@gmail.com";
-export const ADDRESS_LINE_1 = "Lahore main multan Road";
-export const ADDRESS_LINE_2 = "Ali housing socity Lahore";
+export const EMAIL = "faisaldildarassociates@gamil.com";
+export const ADDRESS_LINE_1 = "Main Office Ali Housing Society ";
+export const ADDRESS_LINE_2 = " Main Multan Road Mohlanwal Lahore";
 
 /** Build a WhatsApp deep link that opens a chat with the owner. */
 export function waLink(message: string): string {
@@ -108,30 +108,27 @@ export const properties: Property[] = [
 
 export const posts = [
   {
-    day: "12",
-    month: "SEP",
-    category: "Buying Guide",
-    title: "5 Things to Consider Before Buying Your First Luxury Home",
+    category: "Company",
+    title: "Faisal Dildar Associates",
     excerpt:
-      "Buying your first luxury home is an exciting milestone. Here are 5 key things to consider before you sign anything.",
-    image: "/images/about-villa.jpg",
+      "Faisal Dildar Associates is a professional real estate company focused on helping clients discover the right properties and investment opportunities. With a commitment to trust, transparency, and expert guidance, the company provides reliable property solutions for buyers, sellers, and investors.",
+    image: "/images/Faisaldildar.png",
+    alt: "Faisal Dildar Associates company logo",
   },
   {
-    day: "08",
-    month: "SEP",
-    category: "Investment",
-    title: "How Smart Investors Choose High-Growth Locations",
+    category: "Our Team",
+    title: "Arbaz",
     excerpt:
-      "Location can make or break your investment. Here's how smart investors pick the right areas before the market does.",
-    image: "/images/prop-skyline.jpg",
+      "Arbaz is part of the professional team behind Faisal Dildar Associates, contributing to the company's commitment to quality service and client satisfaction. His focus is on providing clear guidance and helping clients make confident real estate decisions.",
+    image: "/images/arbaz.jpeg",
+    alt: "Arbaz, a member of the Faisal Dildar Associates team",
   },
   {
-    day: "02",
-    month: "SEP",
-    category: "Architecture",
-    title: "Modern Architecture Trends Shaping Luxury Real Estate",
+    category: "Leadership",
+    title: "CEO — Faisal Dildar Associates",
     excerpt:
-      "From sustainable design to smart homes, explore the latest trends in luxury real estate architecture today.",
-    image: "/images/prop-modern.jpg",
+      "The leadership of Faisal Dildar Associates is built around professionalism, trust, and a strong understanding of the real estate market. The company aims to deliver personalized property guidance while building long-term relationships with clients.",
+    image: "/images/Ceo.jpg",
+    alt: "CEO of Faisal Dildar Associates",
   },
 ];
