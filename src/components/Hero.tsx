@@ -20,7 +20,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#f7f8fa] to-white">
+    <section className="relative overflow-hidden bg-linear-to-b from-[#f7f8fa] to-white">
       <div className="pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full bg-[#2596be]/10 blur-3xl" />
       <div className="mx-auto max-w-7xl px-4 pt-12 pb-16 sm:px-6 lg:px-8 lg:pt-16">
         <div className="grid items-center gap-12 lg:grid-cols-2">
