@@ -42,7 +42,7 @@ export const properties: Property[] = [
     area: "2,400 sq ft",
     tag: "Residential",
     category: "Residential",
-    image: "/images/hero-main.jpg",
+    image: "/images/prop-skyline.jpg",
   },
   {
     id: 2,
@@ -66,7 +66,7 @@ export const properties: Property[] = [
     area: "4,050 sq ft",
     tag: "Villa",
     category: "Luxury Villas",
-    image: "/images/hero-pool.jpg",
+    image: "/images/prop-modern.jpg",
   },
   {
     id: 4,
@@ -106,29 +106,3 @@ export const properties: Property[] = [
   },
 ];
 
-export const posts = [
-  {
-    category: "Company",
-    title: "Faisal Dildar Associates",
-    excerpt:
-      "Faisal Dildar Associates is a professional real estate company focused on helping clients discover the right properties and investment opportunities. With a commitment to trust, transparency, and expert guidance, the company provides reliable property solutions for buyers, sellers, and investors.",
-    image: "/images/Faisaldildar.png",
-    alt: "Faisal Dildar Associates company logo",
-  },
-  {
-    category: "Our Team",
-    title: "Arbaz",
-    excerpt:
-      "Arbaz is part of the professional team behind Faisal Dildar Associates, contributing to the company's commitment to quality service and client satisfaction. His focus is on providing clear guidance and helping clients make confident real estate decisions.",
-    image: "/images/arbaz.jpeg",
-    alt: "Arbaz, a member of the Faisal Dildar Associates team",
-  },
-  {
-    category: "Leadership",
-    title: "CEO — Faisal Dildar Associates",
-    excerpt:
-      "The leadership of Faisal Dildar Associates is built around professionalism, trust, and a strong understanding of the real estate market. The company aims to deliver personalized property guidance while building long-term relationships with clients.",
-    image: "/images/Ceo.jpg",
-    alt: "CEO of Faisal Dildar Associates",
-  },
-];

@@ -75,27 +75,26 @@ export default function Properties() {
               key={p.id}
               className="group overflow-hidden rounded-2xl border border-white/10 bg-[#18181c] transition hover:-translate-y-1 hover:border-[#2596be]/50"
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="h-52 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-                <span className="absolute top-3 left-3 rounded-md bg-black/70 px-3 py-1 text-[10px] font-bold tracking-wide text-white backdrop-blur">
-                  {p.tag}
-                </span>
-                <button
-                  onClick={() => toggleLike(p.id)}
-                  aria-label="Save property"
-                  className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-700 transition hover:bg-[#2596be] hover:text-white"
-                >
-                  <Heart
-                    className={`h-4 w-4 ${liked.includes(p.id) ? "fill-[#2596be] text-[#2596be]" : ""}`}
-                  />
-                </button>
-              </div>
-
+              <img
+                src={p.image}
+                alt={p.title}
+                className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
+              />
               <div className="p-5">
+                <div className="mb-4 flex items-center justify-between">
+                  <span className="rounded-md bg-[#2596be]/15 px-3 py-1 text-[10px] font-bold tracking-wide text-[#7ebed3]">
+                    {p.tag}
+                  </span>
+                  <button
+                    onClick={() => toggleLike(p.id)}
+                    aria-label="Save property"
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-700 transition hover:bg-[#2596be] hover:text-white"
+                  >
+                    <Heart
+                      className={`h-4 w-4 ${liked.includes(p.id) ? "fill-[#2596be] text-[#2596be]" : ""}`}
+                    />
+                  </button>
+                </div>
                 <h3 className="text-base font-bold text-white">{p.title}</h3>
                 <p className="mt-1.5 flex items-center gap-1.5 text-xs text-slate-400">
                   <MapPin className="h-3.5 w-3.5 text-[#2596be]" />
@@ -135,29 +134,29 @@ export default function Properties() {
 
       {detail && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
           onClick={() => setDetail(null)}
         >
           <div
             className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative">
-              <img
-                src={detail.image}
-                alt={detail.title}
-                className="h-56 w-full object-cover"
-              />
+            <div className="flex justify-end px-6 pt-6">
               <button
                 onClick={() => setDetail(null)}
                 aria-label="Close"
-                className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-800 hover:bg-[#2596be] hover:text-white"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-800 hover:bg-[#2596be] hover:text-white"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-extrabold text-slate-900">
+            <div className="px-6 pb-6">
+              <img
+                src={detail.image}
+                alt={detail.title}
+                className="h-56 w-full rounded-2xl object-cover"
+              />
+              <h3 className="mt-5 text-xl font-extrabold text-slate-900">
                 {detail.title}
               </h3>
               <p className="mt-1.5 flex items-center gap-1.5 text-sm text-slate-500">
