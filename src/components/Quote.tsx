@@ -52,7 +52,7 @@ export default function Quote() {
             alt="Luxury home at night"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/25" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/45 to-black/25" />
           <div className="relative flex h-full flex-col justify-end p-8 sm:p-12">
             <span className="flex items-center gap-3 text-[11px] font-bold tracking-[0.25em] text-[#a5d3e7]">
               <span className="h-px w-8 bg-[#2596be]" />

@@ -21,7 +21,6 @@ const quickLinks = [
   ["Properties", "#properties"],
   ["About Us", "#about"],
   ["Services", "#services"],
-  ["Blog", "#blog"],
   ["Contact", "#contact"],
 ];
 
@@ -56,7 +55,7 @@ export default function Footer() {
     {
       Icon: LinkedinIcon,
       label: "LinkedIn",
-      href: "http://www.linkedin.com/in/gull-abbas-122255381",
+      href: "https://www.facebook.com/share/18NLAnyGUf/",
     },
     {
       Icon: TikTokIcon,
